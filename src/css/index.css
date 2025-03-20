@@ -10,6 +10,7 @@
 body {
     font-family: "Onest", sans-serif;
     font-weight: 400;
+    height: 1000px;
 }
 
 a {
@@ -26,4 +27,92 @@ button {
 
 img, svg {
     max-width: 100%;
+}
+
+/* Стили для шапки */
+header {
+    display: grid;
+    place-items: center;
+    padding: 25px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(0, 0, 5, 1);
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+}
+
+header .menu a {
+    color: rgba(30, 30, 31, 1);
+    margin-right: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease-in;
+}
+
+header .menu a:hover {
+    color: rgba(80, 80, 85, 1);
+}
+
+/* Стили для переключения языка */
+header .menu .language {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+header .menu .language img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header .menu .language p {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(30, 30, 31, 1);
+}
+
+/* Стили для выпадающего списка */
+header .menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    width: 60px;
+}
+
+header .menu .dropdown p {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(30, 30, 31, 1);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+header .menu .dropdown p:hover {
+    background: rgba(240, 240, 240, 1);
+}
+
+/* Анимация для стрелки */
+.language.active img {
+    transform: rotate(180deg);
 }
