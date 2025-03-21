@@ -10,7 +10,6 @@
 body {
     font-family: "Onest", sans-serif;
     font-weight: 400;
-    height: 1000px;
 }
 
 a {
@@ -38,6 +37,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000; 
+    background-color: white;
 }
 
 header h1 {
@@ -65,7 +65,6 @@ header .menu a:hover {
     color: rgba(80, 80, 85, 1);
 }
 
-/* Стили для переключения языка */
 header .menu .language {
     position: relative;
     display: flex;
@@ -88,7 +87,6 @@ header .menu .language p {
     color: rgba(30, 30, 31, 1);
 }
 
-/* Стили для выпадающего списка */
 header .menu .dropdown {
     display: none;
     position: absolute;
@@ -96,6 +94,7 @@ header .menu .dropdown {
     left: 0;
     overflow: hidden;
     width: 60px;
+    background-color: white;
 }
 
 header .menu .dropdown p {
@@ -112,7 +111,87 @@ header .menu .dropdown p:hover {
     background: rgba(240, 240, 240, 1);
 }
 
-/* Анимация для стрелки */
-.language.active img {
-    transform: rotate(180deg);
+
+/* Стили для блока Hero */
+.hero {
+    background-image: url("../images/1.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    transition: background-image 0.8s ease-in-out;
+}
+
+.hero.fade {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.hero h2 {
+    color: white;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 700;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+    max-width: 932px;
+    margin-bottom: 20px;
+    margin-top: 150px;
+}
+
+.hero p {
+    color: white;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 400;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+    max-width: 932px;
+    margin-bottom: 30px;
+}
+
+.hero a {
+    color: black;
+    background: linear-gradient(92.02deg, #FDD400 0%, #FB6B16 100%);
+    padding: 15px 25px;
+    margin-top: 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.hero a:hover {
+    background: linear-gradient(92.02deg, #E6C100 0%, #E55A00 100%);
+}
+
+/* Стилизация точек */
+.hero .dots {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.hero .dots .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(102, 100, 103, 1);
+    border-radius: 30px;
+    margin-right: 5px;
+}
+
+.hero .dots .dot.active {
+    background-color: white;
+}
+
+.hero .dots .dot:last-child {
+    margin-right: 0;
 }
