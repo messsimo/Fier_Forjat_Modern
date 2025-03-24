@@ -478,3 +478,78 @@ header .menu .dropdown p:hover {
     font-weight: 400;
     font-size: 16px;
 }
+
+
+
+/* Блок с контактами */
+.contacts {
+    padding: 50px 0;
+}
+
+.contacts .text {
+    display: grid;
+    place-items: center;
+}
+
+.contacts h2 {
+    font-size: 52px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.contacts h3 {
+    font-size: 16px;
+    font-weight: 300;
+    width: 550px;
+    text-align: center;
+}
+
+.contacts .container {
+    padding: 0 100px;
+    padding-top: 50px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
+}
+
+.contacts .container .main-block {
+    border-radius: 20px;
+    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(240, 239, 239, 1);
+}
+
+.contacts .container .main-block p {
+    padding-top: 28px;
+    padding-left: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.contacts .container .main-block .info {
+    padding-left: 28px;
+    margin-bottom: 15px;
+}
+
+.contacts .container .main-block .info .block {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.contacts .container .main-block .info .block img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.contacts .container .main-block .info .block span {
+    color: rgba(30, 30, 31, 1);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.contacts .container .main-block iframe {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
