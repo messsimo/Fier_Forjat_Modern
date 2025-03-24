@@ -553,3 +553,24 @@ header .menu .dropdown p:hover {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+
+
+/* Стили для футера */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px 50px 100px;
+}
+
+footer h2 {
+    color: rgba(30, 30, 31, 0.7);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+footer p {
+    color: rgba(30, 30, 31, 0.7);
+    font-size: 14px;
+    font-weight: 300;
+}
