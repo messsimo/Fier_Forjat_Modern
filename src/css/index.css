@@ -211,6 +211,7 @@ header .menu .dropdown p:hover {
 .advantages .container {
     padding: 100px 50px 0px 100px;
     display: grid;
+    place-items: center;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
@@ -280,8 +281,86 @@ header .menu .dropdown p:hover {
     border-radius: 20px;
     margin-right: 25px;
     margin-bottom: 50px;
+    transition: 0.2s ease-in;
+}
+
+.products .container .block:hover {
+    transform: scale(0.98);
 }
 
 .products .container .block:last-child {
     margin-right: 0px;
+}
+
+
+
+/* Стили для блока с галлерии */
+.gallery {
+    padding: 50px 0;
+}
+
+.gallery h2 {
+    font-size: 52px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.gallery .container {
+    padding: 0 100px;
+    display: grid;
+   place-items: center;
+   padding-top: 50px;
+}
+
+.gallery .container .main-img {
+    height: 600px;
+    width: 100%;
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+}
+
+.gallery .container .container-additional {
+    display: flex;
+    flex-wrap: nowrap;
+    vertical-align: bottom;
+    margin-top: 25px;
+}
+
+.gallery .container .container-additional .arrow {
+    width: 20px;
+    height: 40px;
+    margin-top: 30px;
+    transition: 0.2s ease-in;
+}
+
+.gallery .container .container-additional .arrow:hover {
+    transform: scale(0.9);
+}
+
+.gallery .container .container-additional .images {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin: 0 25px;
+}
+
+.gallery .container .container-additional .images img.active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+    border-radius: 8px;
+}
+
+.gallery .container .container-additional .images img {
+    width: 150px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.gallery .container .container-additional .images img:last-child {
+    margin-right: 0px;
+}
+
+.arrow:focus,
+.images img:focus {
+    outline: none;
 }
