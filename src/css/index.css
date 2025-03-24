@@ -421,6 +421,8 @@ header .menu .dropdown p:hover {
     margin-bottom: 10px;
     font-weight: 300;
     font-size: 14px;
+    color: rgba(30, 30, 31, 1);
+
 }
 
 .reviews .container .block .name {
@@ -433,4 +435,46 @@ header .menu .dropdown p:hover {
     color: rgba(255, 105, 31, 1);
     font-weight: 300;
     font-size: 14px;
+}
+
+
+
+/* Стили для блока доставки */
+.deliverry {
+    padding: 50px 100px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.deliverry .main-img {
+    width: 50%;
+}
+
+.deliverry .text {
+    width: 45%;
+    padding-left: 50px;
+}
+
+.deliverry .text h2 {
+    font-size: 52px;
+    font-weight: 700;
+    padding-bottom: 35px;
+}
+
+.deliverry .text .sub-text .block {
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.deliverry .text .sub-text .block img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.deliverry .text .sub-text .block span {
+    color: rgba(30, 30, 31, 1);
+    font-weight: 400;
+    font-size: 16px;
 }
