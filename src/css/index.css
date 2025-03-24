@@ -117,7 +117,7 @@ header .menu .dropdown p:hover {
     background-image: url("../images/1.png");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    max-height: 952px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,7 +145,7 @@ header .menu .dropdown p:hover {
     text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
     max-width: 932px;
     margin-bottom: 20px;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .hero p {
@@ -177,7 +177,7 @@ header .menu .dropdown p:hover {
 .hero .dots {
     display: flex;
     gap: 8px;
-    margin-top: auto;
+    margin-top: 100px;
 }
 
 .hero .dots .dot {
@@ -241,4 +241,47 @@ header .menu .dropdown p:hover {
 
 .advantages .container .block .top span {
     color: rgba(30, 30, 31, 1);
+}
+
+
+/* Стили для блока с товарами */
+.products {
+    padding: 50px 0;
+}
+
+.products .top {
+    display: grid;
+    place-items: center;
+    padding-bottom: 50px;
+}
+
+.products .top h2 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.products .top h3 {
+    color: rgba(30, 30, 31, 1);
+    font-weight: 400;
+    font-size: 18px;
+    max-width: 450px;
+    text-align: center;
+}
+
+.products .container {
+    padding: 0 100px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+}
+
+.products .container .block {
+    border-radius: 20px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+}
+
+.products .container .block:last-child {
+    margin-right: 0px;
 }
