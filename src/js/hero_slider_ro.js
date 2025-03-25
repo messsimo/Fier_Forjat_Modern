@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
     const slides = [
         {
             img: 'src/images/1.png',
@@ -23,35 +22,44 @@ document.addEventListener("DOMContentLoaded", function () {
     ];  
 
     let currentIndex = 0;
-    const hero = document.querySelector(".hero");
-    const title = hero.querySelector("h2");
-    const text = hero.querySelector("p");
-    const dots = document.querySelectorAll(".dot");
 
-    function changeSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
+function createSlides() {
+    const hero = document.querySelector('.hero');
+    slides.forEach((slide, index) => {
+        const slideElement = document.createElement('div');
+        slideElement.classList.add('slide');
+        slideElement.style.backgroundImage = `url(${slide.img})`;
 
-        // Убираем кэширование (добавляем метку времени к URL)
-        const newImageUrl = `${slides[currentIndex].img}?t=${new Date().getTime()}`;
+        const h2 = document.createElement('h2');
+        h2.textContent = slide.h2;
+        slideElement.appendChild(h2);
 
-        // Создаем элемент для нового изображения
-        const newImage = new Image();
-        newImage.src = newImageUrl;
-        newImage.onload = function () {
-            // Убираем старое изображение и добавляем новое с плавным переходом
-            hero.style.backgroundImage = `url('${newImageUrl}')`;
-            hero.classList.add('fade');
-            
-            // Меняем текст
-            title.textContent = slides[currentIndex].h2;
-            text.textContent = slides[currentIndex].p;
+        const p = document.createElement('p');
+        p.textContent = slide.p;
+        slideElement.appendChild(p);
 
-            // Обновляем активный dot
-            dots.forEach(dot => dot.classList.remove("active"));
-            dots[currentIndex].classList.add("active");
-        };
-    }
+        hero.appendChild(slideElement);
+    });
+}
 
-    // Запускаем слайдер каждые 5 секунд
-    setInterval(changeSlide, 5000);
-});
+function changeSlide() {
+    const slidesElements = document.querySelectorAll('.hero .slide');
+    slidesElements.forEach(slide => slide.classList.remove('active'));
+
+    // Активируем текущий слайд
+    slidesElements[currentIndex].classList.add('active');
+
+    // Управление точками
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+
+    currentIndex = (currentIndex + 1) % slides.length;
+}
+
+// Запуск смены слайдов каждые 5 секунд
+setInterval(changeSlide, 5000);
+
+// Инициализация слайдов и первого слайда
+createSlides();
+changeSlide()

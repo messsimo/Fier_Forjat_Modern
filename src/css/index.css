@@ -114,28 +114,34 @@ header .menu .dropdown p:hover {
 
 /* Стили для блока Hero */
 .hero {
-    background-image: url("../images/1.png");
-    background-size: cover;
-    background-position: center;
-    max-height: 952px;
+    position: relative;
+    min-height: 452px;
+    max-height: 452px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Сдвигаем контент вниз */
     text-align: center;
     padding: 50px 20px;
-    transition: background-image 0.8s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
-.hero.fade {
+.hero .slide {
+    position: absolute; /* Слайды накладываются друг на друга */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
     opacity: 0;
-    animation: fadeIn 0.8s forwards;
+    transition: opacity 1s ease-in-out;
+    display: grid;
+    place-items: center;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+.hero .slide.active {
+    opacity: 1;
 }
 
 .hero h2 {
@@ -154,19 +160,22 @@ header .menu .dropdown p:hover {
     font-weight: 400;
     text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
     max-width: 932px;
-    margin-bottom: 30px;
+    margin-bottom: 270px; /* Добавляем отступ снизу, чтобы текст не перекрывался */
+    margin-top: -50px;
 }
 
 .hero a {
     color: black;
     background: linear-gradient(92.02deg, #FDD400 0%, #FB6B16 100%);
     padding: 15px 25px;
-    margin-top: 50px;
+    margin-bottom: 100px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
     font-size: 20px;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 2;
+    margin-top: -200px;
 }
 
 .hero a:hover {
@@ -177,14 +186,15 @@ header .menu .dropdown p:hover {
 .hero .dots {
     display: flex;
     gap: 8px;
-    margin-top: 100px;
+    margin-top: 30px; /* Отступ снизу, чтобы точки не перекрывали кнопку */
+    z-index: 2;
 }
 
 .hero .dots .dot {
     width: 12px;
     height: 12px;
     background-color: rgba(102, 100, 103, 1);
-    border-radius: 30px;
+    border-radius: 50%;
     margin-right: 5px;
 }
 
@@ -195,6 +205,10 @@ header .menu .dropdown p:hover {
 .hero .dots .dot:last-child {
     margin-right: 0;
 }
+
+
+
+
 
 
 /* Стили для блока с преимуществами */
@@ -222,6 +236,8 @@ header .menu .dropdown p:hover {
     margin-right: 25px;
     margin-bottom: 35px;
     padding: 20px;
+    max-height: 117px;
+    min-height: 75px;
 }
 
 .advantages .container .block .top {
@@ -303,33 +319,36 @@ header .menu .dropdown p:hover {
     font-size: 52px;
     font-weight: 700;
     text-align: center;
+    color: #333;
 }
 
 .gallery .container {
     padding: 0 100px;
     display: grid;
-   place-items: center;
-   padding-top: 50px;
+    place-items: center;
+    padding-top: 50px;
 }
 
 .gallery .container .main-img {
     height: 600px;
     width: 100%;
-    transition: transform 0.5s ease;
-    transform: translateX(0);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    border-radius: 8px;
 }
 
 .gallery .container .container-additional {
     display: flex;
-    flex-wrap: nowrap;
-    vertical-align: bottom;
+    align-items: center;
+    justify-content: center;
     margin-top: 25px;
 }
 
 .gallery .container .container-additional .arrow {
     width: 20px;
     height: 40px;
-    margin-top: 30px;
+    margin-top: 10px;
+    cursor: pointer;
     transition: 0.2s ease-in;
 }
 
@@ -342,30 +361,27 @@ header .menu .dropdown p:hover {
     flex-wrap: nowrap;
     overflow: hidden;
     margin: 0 25px;
-}
-
-.gallery .container .container-additional .images img.active {
-    transform: scale(0.9);
-    transition: transform 0.3s;
-    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
 .gallery .container .container-additional .images img {
     width: 150px;
     height: 100px;
     margin-right: 15px;
-    background-size: cover;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.gallery .container .container-additional .images img.active {
+    transform: scale(0.9);
+    opacity: 0.7;
 }
 
 .gallery .container .container-additional .images img:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
-
-.arrow:focus,
-.images img:focus {
-    outline: none;
-}
-
 
 
 /* Стили для блока с отзывами */
