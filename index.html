@@ -12,11 +12,11 @@
         <h1 id="title">Кованое железо Молдова</h1>
 
         <div class="menu">
-            <a href="#">Каталог</a>
-            <a href="#">Отзывы</a>
-            <a href="#">Наши работы</a>
-            <a href="#">О доставке</a>
-            <a href="#">Контакты</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#works">Наши работы</a>
+            <a href="#delivery">О доставке</a>
+            <a href="#contacts">Контакты</a>
             <div class="language">
                 <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/chevron-down.png" alt="chevron-down"/>
                 <p id="current-lang">РУ</p>
@@ -99,7 +99,7 @@
     </div>
 
     <!-- Блок с категориями товаров -->
-    <div class="products">
+    <div class="products" id="catalog">
         <div class="top">
             <h2>Наши продукты</h2>
             <h3>Ознакомьтесь с нашим ассортиментом и выберите идеальные изделия для вашего дома или бизнеса.</h3>
@@ -107,34 +107,34 @@
 
         <div class="container">      
             <div class="block">
-               <a href="#"><img src="src/images/prod1.png" alt="Пика"></a> 
+               <a href="#contacts"><img src="src/images/prod1.png" alt="Пика"></a> 
             </div>
             <div class="block">
-                <a href="#"><img src="src/images/prod2.png" alt="Листья"></a> 
+                <a href="#contacts"><img src="src/images/prod2.png" alt="Листья"></a> 
             </div>
             <div class="block">
-                <a href="#"><img src="src/images/prod3.png" alt="Узоры"></a> 
+                <a href="#contacts"><img src="src/images/prod3.png" alt="Узоры"></a> 
             </div>
             <div class="block">
-                <a href="#"><img src="src/images/prod4.png" alt="Пластиковые заглушки"></a> 
+                <a href="#contacts"><img src="src/images/prod4.png" alt="Пластиковые заглушки"></a> 
             </div>
             <div class="block">
-                <a href="#"><img src="src/images/prod5.png" alt="Шары"></a> 
+                <a href="#contacts"><img src="src/images/prod5.png" alt="Шары"></a> 
             </div>
             <div class="block">
-                <a href="#"><img src="src/images/prod6.png" alt="Ручки"></a> 
+                <a href="#contacts"><img src="src/images/prod6.png" alt="Ручки"></a> 
             </div>
             <div class="block">
-                <a href="#"><img src="src/images/prod7.png" alt="Шарниры"></a> 
+                <a href="#contacts"><img src="src/images/prod7.png" alt="Шарниры"></a> 
             </div>
             <div class="block">
-                <a href="#"><img src="src/images/prod8.png" alt="Балки для откатных ворот"></a> 
+                <a href="#contacts"><img src="src/images/prod8.png" alt="Балки для откатных ворот"></a> 
             </div>
         </div>
     </div>
 
     <!-- Блок с галлерей -->
-    <div class="gallery">
+    <div class="gallery" id="works">
         <h2>Галерея наших работ</h2>
 
         <div class="container">
@@ -157,7 +157,7 @@
     </div>
 
     <!-- Блок с отзывами -->
-    <div class="reviews">
+    <div class="reviews" id="reviews">
         <div class="text">
             <h2>Отзывы клиентов</h2>
             <h3>Мы гордимся доверием наших клиентов! Ознакомьтесь с реальными отзывами и успешными проектами, выполненными нашей компанией.</h3>    
@@ -166,45 +166,50 @@
         <div class="container">
             <div class="block">
                 <img src="src/images/quotes.png">
-                <div class="review">Очень довольны установленным забором! Команда была профессиональна от консультации до установки. Очень рекомендую всем, кому нужно стильное и долговечное решение!</div>
-                <p class="name">Виктор С.</p>
-                <p>р. Бельцы, с. Елизавета</p>
+                <div class="review">Заказывал кованые элементы для ворот в этом магазине – остался доволен! Огромный выбор, качественные материалы и приятные цены. Также присмотрел детали для забора – теперь планирую сделать всё в одном стиле. Спасибо за отличный сервис!</div>
+                <p class="name">Андрей Б.</p>
+                <p>г. Кишинев</p>
             </div>
+            
             <div class="block">
                 <img src="src/images/quotes.png">
-                <div class="review">Очень довольны установленным забором! Команда была профессиональна от консультации до установки. Очень рекомендую всем, кому нужно стильное и долговечное решение!</div>
-                <p class="name">Виктор С.</p>
-                <p>р. Бельцы, с. Елизавета</p>
+                <div class="review">Искали красивые и прочные кованые элементы для перил на террасе. В этом магазине нашли именно то, что нужно! Качество на высоте, цены приятные, а выбор просто впечатляет. Доставили быстро, всё идеально подошло. Рекомендую!</div>
+                <p class="name">Елена В.</p>
+                <p>г. Бельцы</p>
             </div>
+            
             <div class="block">
                 <img src="src/images/quotes.png">
-                <div class="review">Очень довольны установленным забором! Команда была профессиональна от консультации до установки. Очень рекомендую всем, кому нужно стильное и долговечное решение!</div>
-                <p class="name">Виктор С.</p>
-                <p>р. Бельцы, с. Елизавета</p>
+                <div class="review">Приобрёл кованые элементы для забора – просто шикарно! Очень понравилось, что в магазине есть множество вариантов, а цены ниже, чем у конкурентов. Теперь закажу и для ворот, чтобы всё выглядело гармонично. Спасибо!</div>
+                <p class="name">Сергей Н.</p>
+                <p>г. Унгены</p>
             </div>
+            
             <div class="block">
                 <img src="src/images/quotes.png">
-                <div class="review">Очень довольны установленным забором! Команда была профессиональна от консультации до установки. Очень рекомендую всем, кому нужно стильное и долговечное решение!</div>
-                <p class="name">Виктор С.</p>
-                <p>р. Бельцы, с. Елизавета</p>
+                <div class="review">Хотели украсить перила на крыльце и заказали кованые элементы здесь. Отличный ассортимент, доступные цены и качественный материал. Получилось красиво и надёжно. Благодарим за профессиональный подход и быструю доставку!</div>
+                <p class="name">Марина П.</p>
+                <p>г. Орхей</p>
             </div>
+            
             <div class="block">
                 <img src="src/images/quotes.png">
-                <div class="review">Очень довольны установленным забором! Команда была профессиональна от консультации до установки. Очень рекомендую всем, кому нужно стильное и долговечное решение!</div>
+                <div class="review">Купил кованые элементы для ворот – доволен на 100%! Выбор огромный, нашёл именно то, что идеально вписалось в дизайн. Качество отличное, а цены приятно удивили. Теперь буду рекомендовать этот магазин друзьям!</div>
                 <p class="name">Виктор С.</p>
-                <p>р. Бельцы, с. Елизавета</p>
+                <p>г. Комрат</p>
             </div>
+            
             <div class="block">
                 <img src="src/images/quotes.png">
-                <div class="review">Очень довольны установленным забором! Команда была профессиональна от консультации до установки. Очень рекомендую всем, кому нужно стильное и долговечное решение!</div>
-                <p class="name">Виктор С.</p>
-                <p>р. Бельцы, с. Елизавета</p>
-            </div>
+                <div class="review">Очень довольны покупкой кованых элементов для забора. Всё выполнено с вниманием к деталям, материалы крепкие и долговечные. Цены приятно радуют, а сотрудники помогли с выбором. Спасибо за качественный товар!</div>
+                <p class="name">Наталья М.</p>
+                <p>г. Хынчешты</p>
+            </div>            
         </div>
     </div>
 
     <!-- Блок с доставкой -->
-    <div class="deliverry">
+    <div class="deliverry" id="delivery">
         <img class="main-img" src="src/images/man.png">
         <div class="text">
             <h2>Информация о доставке и оплате</h2>
@@ -234,10 +239,10 @@
     </div>
 
     <!-- Блок с контактами -->
-    <div class="contacts">
+    <div class="contacts" id="contacts">
         <div class="text">
             <h2>Свяжитесь с нами</h2>
-            <h3>У нас две точки в стране для вашего удобства: в Бельцах и Кишиневе.</h3>
+            <h3>У нас две точки в стране для вашего удобства: в <b>Бельцах</b> и <b>Кишиневе.</b></h3>
         </div>
 
         <div class="container">
@@ -261,7 +266,7 @@
                         <span>Cуббота: 08:30-15:00</span>
                     </div>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3638.6481767260707!2d28.857554146417066!3d47.02815526116044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c43df38dbdb%3A0xfa14474e6fd7d288!2z0KDRi9C90L7QuiAi0JrQsNC70Y8g0JHQsNGB0LDRgNCw0LHQuNC10Lki!5e0!3m2!1sru!2s!4v1742837756818!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d680.0157253197906!2d28.863181685790366!3d47.019370319619334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d52c392287b%3A0x5b09d19fc4fc2d64!2sFIER%20FORJAT%20MODERN%20SRL!5e0!3m2!1sru!2s!4v1742890580061!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="main-block">
@@ -292,7 +297,7 @@
     <!-- Футер -->
     <footer>
         <h2>SRL FIER FORJAT MODERN © 2025. Toate drepturile rezervate.</h2>
-        <p>Made by Daniel Mihai & team</p>
+        <p>Made by Daniel Mihai & Team</p>
     </footer>
 
     <!-- Подключение JS -->
