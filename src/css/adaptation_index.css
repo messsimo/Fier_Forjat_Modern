@@ -102,3 +102,62 @@
         margin-top: -10px;
     }
 }
+
+
+/* Адаптация для блока с преимуществами */
+@media (max-width: 1020px) {
+    .advantages {
+        padding: 100px 50px;
+    }
+
+    .advantages h2 {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 949px) {
+    .advantages .container .block {
+        max-height: 117px;
+        min-height: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .advantages {
+        padding: 100px 0px;
+    }
+
+    .advantages h2 {
+        font-size: 38px;
+    }
+
+    .advantages .container {
+        padding-top: 75px;
+        padding-left: 50px;
+    padding-right: 25px;
+    }
+}
+
+@media (max-width: 440px) {
+    .advantages .container .block {
+        max-height: 150px;
+        width: auto;
+    }
+
+    .advantages h2 {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 410px) {
+    .advantages .container {
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 390px) {
+    .advantages .container {
+        padding-left: 30px;
+    }
+}
