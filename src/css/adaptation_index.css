@@ -24,3 +24,81 @@
         padding: 35px 25px;
     }
 }
+
+
+/* Адаптация для блока Hero */
+@media (max-width: 1020px) {
+    .hero h2 {
+        font-size: clamp(32px, 5vw, 32px);
+    }
+
+    .hero p {
+        font-size: clamp(16px, 2vw, 16px);
+        margin-top: -125px;
+    }
+
+    .hero a {
+        font-size: 16px;
+        margin-top: 0px;
+    }
+
+    .hero .dots {
+        margin-top: 0;
+    }   
+}
+
+@media (max-width: 844px) {
+    .hero .dots {
+        margin-top: -35px;
+    } 
+
+    .hero h2 {
+        margin-bottom: 20px;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    .hero p {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 593px) {
+    .hero a {
+        margin-top: -90px;
+    }
+
+    .hero .dots {
+        margin-top: -10px;
+    }
+}
+
+@media (max-width: 510px) {
+    .hero h2 {
+        margin-bottom: 85px;
+        margin-top: 50px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .hero p {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .hero .dots {
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero a {
+        margin-top: -190px;
+    }
+
+    .hero .dots {
+        margin-top: -10px;
+    }
+}
