@@ -17,6 +17,8 @@
 
     .container-adaption {
         display: flex;
+        flex-direction: row-reverse;
+    }
     }
 
     header .menu {
@@ -454,5 +456,39 @@
 
     .contacts .text {
         padding: 0 25px;
+    }
+}
+
+/* Адаптация для футера */
+@media (max-width: 1020px) {
+    footer {
+        padding: 25px 50px;
+    }
+}
+
+@media (max-width: 980px) {
+    footer {
+        padding: 25px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer h2 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    footer h2 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 25px 25px;
     }
 }
