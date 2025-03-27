@@ -12,16 +12,35 @@
 
     .burger {
         display: block;
+        margin-top: 45px;
     }
 
     .container-adaption {
         display: flex;
     }
+
+    header .menu {
+        margin-top: 15px;
+    }
+
+    header .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .burger {
+        display: block;
+        margin-top: 35px;
+    }
+
+    header {
+        padding: 15px 50px;
+    }
 }
 
 @media (max-width: 420px) {
     header {
-        padding: 35px 25px;
+        padding: 15px 25px;
     }
 }
 
@@ -125,7 +144,7 @@
 
 @media (max-width: 640px) {
     .advantages {
-        padding: 100px 0px;
+        padding: 50px 15px;
     }
 
     .advantages h2 {
@@ -133,9 +152,18 @@
     }
 
     .advantages .container {
-        padding-top: 75px;
-        padding-left: 50px;
-    padding-right: 25px;
+        place-items: center;
+        align-items: center;
+        grid-template-columns: none;
+        margin: 0 25px;
+        padding: 0;
+    }
+
+    .advantages .container .block {
+        max-height: 150px;
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0;
     }
 }
 
@@ -143,6 +171,8 @@
     .advantages .container .block {
         max-height: 150px;
         width: auto;
+        margin-bottom: 15px;
+        margin-right: 0;
     }
 
     .advantages h2 {
@@ -150,14 +180,56 @@
     }
 }
 
-@media (max-width: 410px) {
-    .advantages .container {
-        padding-left: 50px;
+
+/* Адаптация для блока с продуктами */
+@media (max-width: 1020px) {
+    .products .container {
+        padding: 0 50px;
+    }
+
+    .products .top h2 {
+        font-size: 46px;
+    }
+
+    .products .top h3 {
+        font-size: 16px;
+    }
+
+    .products .top h2 {
+        margin-bottom: 15px;
     }
 }
 
-@media (max-width: 390px) {
-    .advantages .container {
-        padding-left: 30px;
+@media (max-width: 640px) {
+    .products .top h2 {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .products .container {
+        margin: 0 25px;
+        padding: 0;
+    }
+
+    .products .container .block {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .products .container {
+        justify-content: center;
+        grid-template-columns: none;
+    }
+
+    .products .container .block {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .products .container {
+        padding: 0 10px;
     }
 }

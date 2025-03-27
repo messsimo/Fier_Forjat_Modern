@@ -37,12 +37,17 @@ img, svg {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 35px 100px;
+    padding: 0px 100px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     position: sticky;
     top: 0;
     z-index: 1000; 
     background-color: white;
+}
+
+header .logo {
+    width: 125px;
+    height: 125px;
 }
 
 header h1 {
@@ -54,6 +59,7 @@ header h1 {
 header .menu {
     display: flex;
     align-items: center;
+    margin-top: 45px;
 }
 
 header .links a,
