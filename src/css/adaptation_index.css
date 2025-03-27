@@ -283,6 +283,14 @@
 }
 
 /* Адаптация для блока с отзывами */
+@media (max-width: 1440px) {
+    .contacts .container {
+        justify-content: normal;
+        align-items: normal;
+    }
+}
+
+
 @media (max-width: 1020px) {
     .reviews h2 {
         font-size: 46px;
@@ -372,5 +380,79 @@
 
     .deliverry .text .sub-text .block {
         margin-bottom: 15px;
+    }
+}
+
+/* Адаптация для блока с контактами */
+@media (max-width: 1020px) {
+    .contacts .container {
+        padding: 0 50px;        
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 980px) {
+    .contacts .container {
+        padding: 0 50px;
+        padding-top: 50px;
+        display: flex
+    ;
+        overflow-x: none;
+        overflow-y: none;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacts .container .main-block:first-child {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .contacts h2 {
+        font-size: 46px;
+        font-weight: 700;
+        padding-bottom: 15px;
+    }
+
+    .contacts .container .main-block {
+        width: 100%;
+    }
+
+    .contacts .container .main-block iframe {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .contacts .container {
+        padding: 0 25px;
+        padding-top: 50px;
+    }
+
+    .contacts h2 {
+        font-size: 36px;
+    }
+
+    .contacts h3 {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .contacts .container .main-block .info .block span {
+        font-size: 12px;
+    }
+
+    .contacts .container .main-block p {
+        font-size: 18px;
+    }
+
+    .contacts .text {
+        padding: 0 25px;
     }
 }

@@ -604,6 +604,7 @@ header .menu .dropdown p:hover {
     font-size: 52px;
     font-weight: 700;
     padding-bottom: 15px;
+    text-align: center;
 }
 
 .contacts h3 {
@@ -616,15 +617,29 @@ header .menu .dropdown p:hover {
 .contacts .container {
     padding: 0 100px;
     padding-top: 50px;
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll; 
+    overflow-y: hidden; 
+    -webkit-overflow-scrolling: touch; 
+    scroll-snap-type: x mandatory;
+    /* place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 2fr)); */
 }
+
+.contacts .container::-webkit-scrollbar {
+    display: none; 
+  }
 
 .contacts .container .main-block {
     border-radius: 20px;
     box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(240, 239, 239, 1);
+}
+
+.contacts .container .main-block:first-child {
+    margin-right: 25px;
 }
 
 .contacts .container .main-block p {

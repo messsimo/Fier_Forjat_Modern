@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produse din metal | Fier Forjat Modern</title>
     <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="src/css/adaptation_index.css">
 </head>
 <body>
     <div id="header"></div>
     <!-- Шапка -->
     <header>
-        <a href="#header"><h1>LOGO</h1></a>
+        <a href="#header">
+            <img class="logo" src="src/images/logo.svg" alt="FFM">
+        </a>
 
         <div class="links">
             <a href="#catalog">Catalog</a>
@@ -19,6 +22,27 @@
             <a href="#delivery">Despre livrare</a>
             <a href="#contacts">Contacte</a>
         </div>
+
+        <!-- Бургер меню -->
+        <div class="container-adaption">
+            <div class="burger">
+                <svg class="burger_open" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                    viewBox="0 0 50 50">
+                    <path
+                        d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z">
+                    </path>
+                </svg>
+                <div class="dropdown-menu">
+                    <img class="burger_close" src="src/images/close.png" alt="Close">
+                    <nav>
+                        <a href="#catalog">Catalog</a>
+                        <a href="#reviews">Recenzii</a>
+                        <a href="#works">Lucrările noastre</a>
+                        <a href="#delivery">Despre livrare</a>
+                        <a href="#contacts">Contacte</a>
+                    </nav>
+                </div>
+            </div>
 
         <div class="menu">
             <div class="language">
@@ -308,5 +332,6 @@
     <script src="src/js/language.js"></script>
     <script src="src/js/hero_slider_ro.js"></script>
     <script src="src/js/gallery_slider.js"></script>
+    <script src="src/js/burger_menu.js"></script>
 </body>
 </html>
